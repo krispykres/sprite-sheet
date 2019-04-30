@@ -1,0 +1,60 @@
+@import 'icon/*.png';
+@include all-icon-sprites;
+
+ul{
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      
+      li{
+            list-style: none;
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+
+            a{
+                  display: inline-block;
+                  width: 150px;
+                  height: 150px;
+      //            transition: all 1s ease;
+
+                  span{
+                        position: absolute;
+      //                  top: -9999em;
+      //                  bottom: -9999em;
+                  }//go
+            }//icons
+      }//li
+}
+
+body{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 100px 1fr;
+      grid-template-areas: 
+            "head head head head"
+            ". secOne secTwo .";
+      background: $bggrad;
+      background-repeat: no-repeat;
+      font-family: $basefont;
+}
+
+.heads{
+      grid-area: head;
+}
+
+.firstGroup{
+      grid-area: secOne;
+}
+
+.secondGroup{
+      grid-area: secTwo;
+}
+
+header{
+      h1{
+            @include box;
+            text-align: center;
+            color: $headcolor;
+      }
+}
